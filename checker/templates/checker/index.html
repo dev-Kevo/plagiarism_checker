@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %} index {% endblock %}
+
+{% block content %}
+    <div class="container mx-auto mt-5">
+        <div class="top w-2/3 flex align-items-center justify-between mx-auto">
+            <div class="text">
+                <button hx-get="{% url 'text_submission' %}" hx-trigger="click" hx-target="#place" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"   >I have a text</button>
+            </div>
+            <div class="text">
+                <button hx-get="{% url 'doc_submission' %}" hx-trigger="click" hx-target="#place" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Document</button>
+            </div>
+        </div>
+
+    <div id="place" class="mt-5 mx-auto w-full flex align-items-center justify-between mx-auto">
+        <form method="post" enctype="multipart/form-data" class="mt-5 w-full mx-auto p-4 rounded-lg">
+            <h1 class="text-center font-medium font-bold mb-5">Submit Text for Plagiarism Check</h1>
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 mt-5">Check</button>
+
+        </form>
+    </div>
+
+    </div>
+
+{% endblock %}

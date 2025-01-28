@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ======================== REUSABLE ELEMENTS (components) ============================== */
+.btn{
+    padding: 7px 5px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: var(--color-black);
+}
+
+.btn-dark{
+    background-color: var(--color-dark);
+}
+
+
+
+:root{
+    --color-primary:#cc1815;
+    --color-dark:#420706;
+    --color-primary-fade:#ecc6c5;
+    --color-secondary:#fccc00;
+    --color-white:#fff;
+    --color-black:#000;
+}
+
+/* ================================================ */
+
+.p_container .banner{
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.p_container .banner .img_overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%);
+}
+
+
+.p_container .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.p_container .banner .msg{
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    color: var(--color-white);
+    left: 20%;
+    padding: 1.3rem;
+}
+

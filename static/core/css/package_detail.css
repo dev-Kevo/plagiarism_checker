@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ======================== REUSABLE ELEMENTS (components) ============================== */
+.btn{
+    padding: 7px 5px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: var(--color-black);
+}
+
+.btn-dark{
+    background-color: var(--color-dark);
+}
+
+
+
+:root{
+    --color-primary:#cc1815;
+    --color-dark:#420706;
+    --color-primary-fade:#ecc6c5;
+    --color-secondary:#fccc00;
+    --color-white:#fff;
+    --color-black:#000;
+}
+
+/* ================================================ */
+
+.container .banner{
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.container .banner .img_overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%);
+}
+
+
+.container .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.container .banner .msg{
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    color: var(--color-white);
+    left: 20%;
+    padding: 1.3rem;
+}
+
+.container .banner .msg h2{
+    margin: 1rem;
+    text-align: center;
+}
+
+.container .banner .msg p{
+    /* margin: 1rem; */
+    text-align: center;
+    line-height: 1.5;
+}
+/* ============================ */
+
+.packages_container{
+    width: 90%;
+    margin: 1.3rem auto;
+} 
+
+.packages_container .packages{
+    background: #ecc6c5;
+    position: relative;
+    padding: 1rem;
+}
+
+.packages_container .packages .package_card{
+    width: 800px;
+    height: 400px;
+    margin: 1.2rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    transform: scale(.9);
+    transition: all .6s ease-in-out;
+}
+
+.packages_container .packages .package_card:hover{
+    transform: scale(.93);
+}
+
+.packages_container .packages .package_card .package_actions{
+    position: absolute;
+    padding: .3rem;
+    bottom: 0;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, rgba(225, 0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+    width: 100%;
+}
+
+
+.packages_container .packages .package_card button{
+    margin-bottom: 1rem;
+}
+
+.packages_container .packages .package_card .package_actions .package_title a{
+    color: var(--color-black);
+    /* margin: 1rem; */
+    font-size: 2rem;
+}
+
+.packages_container .packages .package_card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem .5rem 0 0;
+    
+
+}
+
+.container .global_description{
+    width: 80%;
+    margin: 1.3rem auto;
+}
+
+.container .global_description .detailed_description{
+    margin-top: 2rem;
+}
+
+.container .global_description .detailed_description h2{
+    margin: 1rem;
+}
+
+.container .global_description .detailed_description .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+.container .global_description .detailed_description .cards .card{
+    /* border: 1px solid black; */
+    margin: .7rem;
+    padding: .3rem;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    border-radius: .4rem;
+}
+
+.container .global_description .detailed_description .cards .card h3{
+    margin: .3rem;
+    text-align: center;
+}
+
+.featured_packages{
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    background-color: white;
+    border-radius: .4rem;
+    padding: .7rem;
+}
+
+.featured_packages ul{
+    list-style: none;
+    
+}
+
+.featured_packages ul li{
+    margin: .6rem;
+    
+}
+
+.featured_packages ul li a{
+    color: var(--color-black);
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.featured_packages ul li a:hover{
+    text-decoration: underline;
+    
+}
+

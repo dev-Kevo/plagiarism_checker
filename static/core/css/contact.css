@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+/* ======================== REUSABLE ELEMENTS (components) ============================== */
+.btn{
+    padding: 7px 5px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-white{
+    background-color: var(--color-white);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.dark-link{
+    color: var(--color-black);
+}
+
+:root{
+    --color-primary:#cc1815;
+    --color-primary-fade:#c68988;
+    --color-secondary:#fccc00;
+    --color-white:#fff;
+    --color-black:#000;
+    --color-dark:#480606;
+}
+
+
+.contact_container .banner{
+   height: 40vh;
+   background-color: aqua;
+}
+
+.contact_container .banner img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.contact_container .cards{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(18rem, 1fr));
+   gap: 5;
+   margin-top: 1.7rem;
+}
+
+.contact_container .cards .card{
+    background-color: #ffffff;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 3px 4px 5px rgba(255, 0, 0, 0.2);
+    margin: 1.7rem;
+    
+}
+
+.contact_container .cards .office .icon,
+.contact_container .cards .numbers .icon,
+.contact_container .cards .email .icon{
+   margin: 1rem;
+}
+
+.contact_container .cards .office h3,
+.contact_container .cards .numbers h3,
+.contact_container .cards .email h3{
+   margin-bottom: .7rem;
+}
+
+.contact_container .cards .office p,
+.contact_container .cards .numbers p,
+.contact_container .cards .email p{
+   font-weight: 500;
+}
+
+
+.contact_container .message{
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.contact_booking{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.contact_container .message .header h2{
+    text-align: center;
+    margin-bottom: .7rem;
+}
+
+.contact_container .message .msg p{
+    line-height: 2;
+}
+
+
+.contact_form{
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.contact_form{
+    width: 80%;
+    margin: 2rem auto;
+}
+
+
+.contact_form .form{
+    border: 1px solid #bd7373;
+    border-radius: .3rem;
+}
+
+.contact_form .form .header h1{
+    text-align: center;
+    margin: 1rem;
+}
+
+
+
+.contact_form .form .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_form .form .container .image{
+    /* background: #480606; */
+    width: 350px;
+}
+
+
+.contact_form .form .container .image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact_form .form .container form{
+    /* background: #480606; */
+    width: 50%;
+
+}
+
+
+
+
+.contact_form .form form div label {
+    display: block;
+    margin-top: .7rem;
+}
+
+.contact_form .form form div input[type='text'],
+.contact_form .form form div input[type='email'], 
+.contact_form .form form div textarea{
+    display: block;
+    width: 100%;
+    border: 1px solid #bd7373;
+    outline: none;
+    font-size: 1rem;
+    padding: .3rem;
+    border-radius: .2rem;
+}
+
+.contact_form .form form div textarea{
+    height: 10rem;
+    resize: none;
+}
+
+.contact_form .form form button{
+    margin-top: 2rem;
+    width: 5rem;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px){
+    html{
+        overflow-x: hidden;
+    }
+
+    body{
+            overflow-x: hidden;
+    }
+
+    .contact_form .form .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact_form .form .container form{
+        width: 90%;
+        margin: 0;
+}
+
+
+
+}

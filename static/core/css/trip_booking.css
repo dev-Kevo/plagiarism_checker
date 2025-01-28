@@ -1,0 +1,10 @@
+body{
+    background: #eeebeb;
+}
+
+.errorlist {
+    background-color: #f5c5c5;
+    color: red;
+    padding: 4px;
+}
+

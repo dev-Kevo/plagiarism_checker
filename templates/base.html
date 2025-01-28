@@ -1,0 +1,28 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plagiarism Checker. | {% block title %}{% endblock %}</title>
+    {% tailwind_css %}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
+      type="text/css"
+    />
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static 'js/alpine.min.js' %}"></script>
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/dropzone.min.js' %}"></script>
+
+
+</body>
+</html>

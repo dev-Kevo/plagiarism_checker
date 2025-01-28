@@ -1,0 +1,8 @@
+<h1>Plagiarism Results</h1>
+<p>Similarity Score: {{ submission.similarity_score }}</p>
+<h2>Matched Sources:</h2>
+<ul>
+    {% for source in submission.matched_sources %}
+        <li>{{ source.source }} - {{ source.score }}</li>
+    {% endfor %}
+</ul>
